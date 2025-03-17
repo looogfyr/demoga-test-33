@@ -15,4 +15,4 @@ gradlew
 gradlew.bat
 settings.gradle
 ### Logs ###
-*.log
+*.logs
