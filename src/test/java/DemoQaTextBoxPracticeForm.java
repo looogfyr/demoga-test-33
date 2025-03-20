@@ -16,7 +16,7 @@ public class DemoQaTextBoxPracticeForm {
 
     @Test
     void fillPracticeForm() {
-        //Student Registration Form
+
         open("/automation-practice-form");
         $("#firstName").setValue("Alexey");
 
@@ -49,17 +49,27 @@ public class DemoQaTextBoxPracticeForm {
         $("#react-select-4-option-1").click();
 
         $("#submit").click();
-        //Thanks for submitting the form
+
         $("div.modal-content table.table-dark").$(byText("Student Name")).parent().shouldHave(text("Alexey Dubinin"));
+
         $("div.modal-content table.table-dark").$(byText("Student Email")).parent().shouldHave(text("Alexey@gmail.com"));
+
         $("div.modal-content table.table-dark").$(byText("Gender")).parent().shouldHave(text("Male"));
+
         $("div.modal-content table.table-dark").$(byText("Mobile")).parent().shouldHave(text("6061201200"));
+
         $("div.modal-content table.table-dark").$(byText("Date of Birth")).parent().shouldHave(text("01 January,2000"));
+
         $("div.modal-content table.table-dark").$(byText("Date of Birth")).parent().shouldHave(text("01 January,2000"));
+
         $("div.modal-content table.table-dark").$(byText("Subjects")).parent().shouldHave(text("Computer Science"));
+
         $("div.modal-content table.table-dark").$(byText("Hobbies")).parent().shouldHave(text("Sports, Music"));
+
         $("div.modal-content table.table-dark").$(byText("Picture")).parent().shouldHave(text("gomer.png"));
+
         $("div.modal-content table.table-dark").$(byText("Address")).parent().shouldHave(text("Chita, st.Beketov 25, kv.28"));
+
         $("div.modal-content table.table-dark").$(byText("State and City")).parent().shouldHave(text("Rajasthan Jaiselmer"));
 
         sleep(10000);
